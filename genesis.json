@@ -1,6 +1,6 @@
 {
     "config": {
-        "chainId": 5555,
+        "chainId": $ETH_CHAIN_ID,
         "homesteadBlock": 1,
         "eip150Block": 2,
         "eip150Hash": "0x0000000000000000000000000000000000000000000000000000000000000000",

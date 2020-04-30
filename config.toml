@@ -1,5 +1,5 @@
 [Eth]
-NetworkId = 5555
+NetworkId = $ETH_CHAIN_ID
 SyncMode = "full"
 NoPruning = true
 
