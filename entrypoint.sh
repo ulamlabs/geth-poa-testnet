@@ -5,8 +5,9 @@ export ETH_VERBOSITY=${ETH_VERBOSITY:-1}
 export ETH_CHAIN_ID=${ETH_CHAIN_ID:-5555}
 
 replace_env() {
-  for var in $(env | sed 's;=.*;;' | grep ETH_); do
-    sed -i "s|\$$var|${!var}|g" $1
+  for key in $(env | sed 's;=.*;;' | grep ETH_); do
+    val=$(eval echo \$$key)  # sh doesn't support indirect substitution
+    sed -i "s|\$$key|$val|g" $1
   done
 }
 
