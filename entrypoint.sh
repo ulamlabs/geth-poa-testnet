@@ -23,6 +23,26 @@ echo $ETH_PRIVATE_KEY > /tmp/eth_private_key
 geth --datadir /data init ./.genesis.json
 geth --datadir /data account import --password /tmp/eth_pass /tmp/eth_private_key || true
 
+#
+# Create buffer account (start)
+# 
+echo carsdrivefasterbecausetheyhavebrakes > /tmp/buffer_pass
+echo 766df34218d5a715018d54789d6383798a1885088d525670802ed8cf152db5b4 > /tmp/buffer_private_key
+geth account import --datadir /data --password /tmp/buffer_pass /tmp/buffer_private_key
+#
+# Create buffer account (end)
+#
+
+#
+# Create exchange account (start)
+# 
+echo a-turkey-is-a-chicken-designed-by-a-committee > /tmp/exchange_pass
+echo b07aedf303f832664eb7a5295be737776cb1ad17a277ec287b3b3c7bac154e5e > /tmp/exchange_private_key
+geth account import --datadir /data  --password /tmp/exchange_pass  /tmp/exchange_private_key
+#
+# Create exchange account (end)
+# 
+
 if [[ $# -eq 0 ]] ; then
   exec geth --config .config.toml --allow-insecure-unlock --nousb --verbosity $ETH_VERBOSITY --gcmode=archive --mine --miner.threads 1 --unlock $ETH_ADDRESS --password /tmp/eth_pass --rpcapi="db,eth,net,web3,personal"
 else
