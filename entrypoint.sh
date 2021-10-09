@@ -24,7 +24,7 @@ geth --datadir /data init ./.genesis.json
 geth --datadir /data account import --password /tmp/eth_pass /tmp/eth_private_key || true
 
 if [[ $# -eq 0 ]] ; then
-  exec geth --config .config.toml --allow-insecure-unlock --nousb --verbosity $ETH_VERBOSITY --gcmode=archive --mine --miner.threads 1 --unlock $ETH_ADDRESS --password /tmp/eth_pass
+  exec geth --config .config.toml --allow-insecure-unlock --nousb --verbosity $ETH_VERBOSITY --gcmode=archive --mine --miner.threads 1 --unlock $ETH_ADDRESS --password /tmp/eth_pass --rpcapi="db,eth,net,web3,personal"
 else
   exec "$@"
 fi
