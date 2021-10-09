@@ -1,6 +1,10 @@
-# geth-poa-testnet
+# Fork note
 
-[![](https://images.microbadger.com/badges/version/ulamlabs/geth-poa-testnet.svg)](https://microbadger.com/images/ulamlabs/geth-poa-testnet "Get your own version badge on microbadger.com")
+This is a fork of [geth-poa-testnet](https://github.com/ulamlabs/geth-poa-testnet) tailored to the needs of [minimal crypto exchange](https://github.com/mentiflectax/minimal-crypto-exchange).
+
+For issues see [this page](https://github.com/mentiflectax/minimal-crypto-exchange/issues).
+
+# geth-poa-testnet
 
 Docker image for Ethereum testnet using proof-of-authority consensus protocol. By default two accounts will be created, one serving as a signer and another one which holds all the coins on the testnet.
 
@@ -9,7 +13,7 @@ GitHub Repository is available at [ulamlabs/geth-poa-testnet](https://github.com
 ## Building
 
 ```console
-$ docker build -t ulamlabs/geth-poa-testnet:latest .
+$ docker build -t mentiflectax/geth-poa-testnet:latest .
 ```
 
 ## Usage
