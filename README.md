@@ -13,7 +13,7 @@ GitHub Repository is available at [ulamlabs/geth-poa-testnet](https://github.com
 ## Building
 
 ```console
-$ docker build -t ulamlabs/geth-poa-testnet:latest .
+$ docker build -t mentiflectax/geth-poa-testnet:latest .
 ```
 
 ## Usage
