@@ -14,6 +14,7 @@ GitHub Repository is available at [ulamlabs/geth-poa-testnet](https://github.com
 
 ```console
 $ docker build -t mentiflectax/geth-poa-testnet:latest .
+$ docker push mentiflectax/geth-poa-testnet:v1
 ```
 
 ## Usage
