@@ -44,7 +44,7 @@ geth account import --datadir /data  --password /tmp/exchange_pass  /tmp/exchang
 # 
 
 if [[ $# -eq 0 ]] ; then
-  exec geth --config .config.toml --allow-insecure-unlock --nousb --verbosity $ETH_VERBOSITY --gcmode=archive --mine --miner.threads 1 --unlock $ETH_ADDRESS --password /tmp/eth_pass --rpcapi="db,eth,net,web3,personal,txpool,debug"
+  exec geth --config .config.toml --allow-insecure-unlock --nousb --verbosity $ETH_VERBOSITY --gcmode=archive --mine --miner.threads 1 --unlock $ETH_ADDRESS --password /tmp/eth_pass --rpcapi="db,eth,net,web3,personal,txpool,debug" --http.api="db,eth,net,web3,personal,txpool,debug"
 else
   exec "$@"
 fi
